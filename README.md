@@ -224,3 +224,8 @@ bookverse_proyecto_raiz/
 *   Pruebas automatizadas.
 
 ![image](https://github.com/user-attachments/assets/3c278fcc-f9ae-4ba4-9143-081251ffc4f8)
+![image](https://github.com/user-attachments/assets/272fa0b4-2fd6-4cbb-88e6-22963ce3b7a1)
+![image](https://github.com/user-attachments/assets/a6295269-9602-40ad-b46e-e33e8157798a)
+![image](https://github.com/user-attachments/assets/f1bbdd7f-366c-4375-8e02-3bb1b9e3b8e7)
+
+
