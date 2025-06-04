@@ -130,28 +130,60 @@ Muchos lectores disfrutan la lectura como una actividad social, pero enfrentan d
 
 ## Estructura del Proyecto
 bookverse_proyecto_raiz/
-├── back/ # Backend (Flask)
-│ ├── venv/ # Entorno virtual (ignorado por Git)
-│ ├── app.py # Aplicación principal Flask
-│ ├── db.py # Lógica de conexión a BD
-│ ├── schema.sql # Esquema de la BD
-│ ├── sample_data.sql # Datos de ejemplo
-│ ├── requirements.txt # Dependencias de Python
-│ └── .env # Variables de entorno (ignorado por Git)
-├── front/ # Frontend (React)
-│ ├── node_modules/ # Dependencias de Node (ignorado por Git)
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── context/
-│ │ ├── App.js
-│ │ ├── index.js
-│ │ └── App.css # (o index.css para estilos globales)
-│ ├── package.json
-│ └── tailwind.config.js # Si usas Tailwind
-├── .gitignore
-└── README.md
+├── .git/                 # Carpeta de Git (oculta)
+├── .gitignore            # Especifica los archivos y carpetas a ignorar por Git
+├── README.md             # Este archivo
+├── back/                 # Directorio del Backend (Aplicación Flask)
+│   ├── venv/             # Entorno virtual de Python (ignorado por .gitignore)
+│   ├── app.py            # Archivo principal de la aplicación Flask, define rutas y lógica.
+│   ├── db.py             # Módulo para la conexión y operaciones con la base de datos.
+│   ├── requirements.txt  # Lista de dependencias de Python para el backend.
+│   ├── schema.sql        # Script SQL para crear la estructura de la base de datos.
+│   ├── sample_data.sql   # Script SQL con datos de ejemplo para la base de datos.
+│   └── .env              # Variables de entorno para el backend (ignorado por .gitignore).
+└── front/                # Directorio del Frontend (Aplicación React)
+    ├── node_modules/     # Dependencias de Node.js (ignorado por .gitignore)
+    ├── public/           # Contiene el index.html base y otros activos públicos.
+    │   ├── index.html
+    │   └── ...
+    ├── src/              # Código fuente principal de la aplicación React.
+    │   ├── components/     # Componentes reutilizables de UI (LoginForm, RegisterForm, etc.).
+    │   │   ├── LoginForm.js
+    │   │   ├── LoginForm.css
+    │   │   ├── RegisterForm.js
+    │   │   ├── RegisterForm.css
+    │   │   └── ...
+    │   ├── pages/          # Componentes que representan "páginas" completas de la aplicación.
+    │   │   ├── HomePage.js
+    │   │   ├── HomePage.css
+    │   │   ├── BookListPage.js   # (Si moviste BookListDisplay aquí)
+    │   │   ├── BookListPage.css
+    │   │   ├── BookDetailPage.js
+    │   │   ├── BookDetailPage.css
+    │   │   ├── ClubListPage.js
+    │   │   ├── ClubListPage.css
+    │   │   ├── ClubDetailPage.js
+    │   │   ├── ClubDetailPage.css
+    │   │   ├── CreateClubPage.js
+    │   │   ├── CreateClubPage.css
+    │   │   ├── MyShelfPage.js
+    │   │   ├── MyShelfPage.css
+    │   │   ├── ThreadDetailPage.js
+    │   │   ├── ThreadDetailPage.css
+    │   │   ├── AddBookPage.js      # (Página de admin para añadir libros)
+    │   │   ├── AddBookPage.css
+    │   │   └── ...
+    │   ├── context/        # Contextos de React (ej. AuthContext.js).
+    │   │   └── AuthContext.js
+    │   ├── App.js          # Componente raíz de React, define la estructura y el enrutamiento.
+    │   ├── App.css         # Estilos globales para App.js y clases de utilidad comunes.
+    │   ├── index.js        # Punto de entrada de JavaScript para la aplicación React.
+    │   └── index.css       # Archivo CSS raíz, importa fuentes y App.css, reseteos.
+    ├── .env              # Variables de entorno para el frontend (ignorado por .gitignore, si usas).
+    ├── package.json      # Metadatos del proyecto Node.js y lista de dependencias.
+    ├── package-lock.json # Versiones exactas de las dependencias.
+    └── tailwind.config.js # Archivo de configuración de Tailwind CSS (si lo usaste).
+                          # O postcss.config.js si es relevante.
 
 
 ## Endpoints de la API (Resumen)
@@ -191,3 +223,4 @@ bookverse_proyecto_raiz/
 *   Perfiles de usuario.
 *   Pruebas automatizadas.
 
+![image](https://github.com/user-attachments/assets/3c278fcc-f9ae-4ba4-9143-081251ffc4f8)
