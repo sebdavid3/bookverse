@@ -1,0 +1,60 @@
+/* src/pages/ClubListPage.css */
+/* .page-container y .page-title ya vienen de App.css */
+
+.club-list-grid { /* Si decides usar grid en lugar de lista simple */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.club-card {
+  background-color: #fff;
+  border: 1px solid #CBD5E1; /* brand-border */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.club-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  transition: all 0.2s ease-in-out;
+}
+
+.club-card__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1D4ED8; /* brand-primary */
+  margin-bottom: 0.5rem;
+}
+.club-card__title a:hover {
+  text-decoration: underline;
+}
+
+.club-card__description {
+  color: #475569; /* brand-text-secondary */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Para que todas las tarjetas tengan altura similar si el contenido varía */
+  /* Para truncar texto si es muy largo (requiere más CSS o JS) */
+  /* overflow: hidden; */
+  /* display: -webkit-box; */
+  /* -webkit-line-clamp: 3; */
+  /* -webkit-box-orient: vertical;   */
+}
+
+.club-card__meta {
+  font-size: 0.8rem;
+  color: #64748B;
+  border-top: 1px solid #E5E7EB;
+  padding-top: 0.75rem;
+  margin-top: auto; /* Empuja al final de la tarjeta */
+}
+
+.club-list-page .create-club-link-container { /* Contenedor para el botón de crear */
+    text-align: right; /* O como quieras alinearlo */
+    margin-bottom: 1.5rem;
+}

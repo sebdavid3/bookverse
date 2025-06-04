@@ -1,0 +1,15 @@
+/* src/components/RegisterForm.css */
+
+/* La clase .form-container se aplica al div raíz en RegisterForm.js */
+
+.register-form-specific-styles .form-group {
+    /* Si necesitas algún ajuste específico para los campos de registro */
+}
+
+.register-form-specific-styles .password-requirements {
+    font-size: 0.8rem;
+    color: #475569; /* brand-text-secondary */
+    margin-top: -0.75rem; /* Acercar a la contraseña */
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
+}

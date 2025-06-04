@@ -1,0 +1,71 @@
+/* src/pages/ClubListPage.css */
+/* .page-container y .page-title se heredan de App.css */
+
+.club-list-page .page-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* Más espacio */
+}
+
+.club-list-page .page-title {
+  margin-bottom: 0; /* Quitar margen si está en flex con botón */
+}
+
+.club-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem; /* Un poco más de espacio */
+}
+
+.club-card {
+  background-color: #fff;
+  border: 1px solid #E5E7EB; /* Borde gris claro */
+  border-radius: 10px; /* Más redondeado */
+  padding: 1.5rem; /* Buen padding interno */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column; /* Para alinear meta al final */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.club-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.club-card__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.375rem; /* ~22px */
+  font-weight: 600;
+  color: #1D4ED8; /* brand-primary */
+  margin-bottom: 0.5rem;
+}
+.club-card__title a {
+  color: inherit; /* Hereda color de h3 */
+}
+.club-card__title a:hover {
+  color: #1E3A8A; /* brand-primary-dark */
+  text-decoration: underline;
+}
+
+.club-card__description {
+  color: #475569; /* brand-text-secondary */
+  font-size: 0.95rem; /* Ligeramente más grande */
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  flex-grow: 1; 
+  /* Truncar texto (ejemplo de 3 líneas) */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+
+.club-card__meta {
+  font-size: 0.85rem;
+  color: #64748B; /* Gris/Slate */
+  border-top: 1px solid #F3F4F6; /* Borde muy sutil */
+  padding-top: 1rem;
+  margin-top: auto; /* Empuja al final */
+}

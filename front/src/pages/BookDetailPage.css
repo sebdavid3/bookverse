@@ -1,0 +1,141 @@
+/* src/pages/BookDetailPage.css */
+/* .page-container y .page-title se heredan de App.css */
+
+.book-detail-page {
+    /* La clase .page-container ya proporciona padding y max-width. */
+    /* Aquí puedes añadir estilos específicos para el layout de BookDetailPage. */
+}
+
+.book-detail-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto para móviles */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .book-detail-content {
+    grid-template-columns: auto 1fr; /* Columna para imagen, el resto para texto */
+    /* O: grid-template-columns: 250px 1fr; si quieres un ancho fijo para la imagen */
+  }
+}
+
+.book-cover-container {
+    text-align: center; /* Centrar imagen en móviles */
+}
+
+.book-cover-container img {
+  max-width: 250px; /* Ajusta según necesidad */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  margin-bottom: 1rem; /* Espacio si el texto va debajo en móviles */
+}
+
+@media (min-width: 768px) {
+  .book-cover-container {
+    text-align: left; /* Alinear a la izquierda en pantallas más grandes */
+    margin-right: 2rem; /* Espacio entre imagen y detalles */
+  }
+  .book-cover-container img {
+     margin-bottom: 0;
+  }
+}
+
+.book-info-main h2 { /* Título del libro */
+    font-family: 'Montserrat', sans-serif;
+    color: #1E293B; /* brand-text */
+    font-size: 2rem; /* Más grande */
+    margin-top: 0; /* Quitar margen superior si es el primer elemento */
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    border-bottom: none; /* Quitar el borde si .page-title lo tiene */
+}
+
+.book-info-main .book-author {
+    font-size: 1.25rem;
+    color: #475569; /* brand-text-secondary */
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.book-meta-item {
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+.book-meta-item strong {
+    font-weight: 600;
+    color: #1E293B;
+}
+
+.book-description-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E5E7EB;
+}
+.book-description-section h3 { /* Título "Descripción" */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E3A8A; /* brand-primary-dark */
+    margin-bottom: 0.75rem;
+}
+.book-description-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #334155;
+    white-space: pre-wrap; /* Para respetar saltos de línea en la descripción */
+}
+
+
+.add-to-shelf-actions {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.add-to-shelf-actions h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1E3A8A;
+}
+
+.add-to-shelf-actions .button-group { /* Si quieres agrupar los botones */
+    display: flex;
+    flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
+    gap: 0.75rem; /* Espacio entre botones */
+}
+
+.add-to-shelf-actions .button { /* Hereda de .button global */
+  /* Puedes añadir o sobrescribir estilos específicos aquí */
+  background-color: #64748B; /* Secundario por defecto para estos botones */
+}
+.add-to-shelf-actions .button:hover {
+  background-color: #475569;
+}
+
+.shelf-action-message { /* Para el shelfMessage */
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.shelf-action-message.success {
+    color: #065f46; /* Verde oscuro */
+}
+.shelf-action-message.error {
+    color: #b91c1c; /* Rojo oscuro */
+}
+
+.back-to-list-link {
+    display: inline-block; /* Para que el margen funcione bien */
+    margin-top: 2rem;
+    font-weight: 500;
+    color: #1D4ED8;
+}
+.back-to-list-link:hover {
+    color: #1E3A8A;
+}

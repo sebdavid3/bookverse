@@ -1,0 +1,25 @@
+/* src/pages/AddBookPage.css */
+
+/* .page-container y .form-container se heredan de App.css, 
+   así como los estilos para .form-group, label, input, button. */
+
+.add-book-page .page-title { /* Si usas un h2 con esta clase dentro del form-container */
+    text-align: center;
+    margin-bottom: 1.5rem; /* Ajuste del margen si es necesario */
+    /* Hereda color y fuente de .page-title global, pero puedes sobrescribir */
+}
+
+/* Si necesitas algún ajuste específico para los campos de AddBookPage,
+   podrías hacerlo aquí, aunque los estilos de .form-group deberían ser suficientes.
+   Por ejemplo:
+*/
+.add-book-page .form-group input[type="number"] {
+    /* Estilos específicos para el input de año si es diferente */
+}
+
+.add-book-page .form-actions {
+    /* Estilos para el contenedor de botones si hay más de uno, 
+       pero el botón de submit ya tiene estilos globales. */
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha, por ejemplo */
+}

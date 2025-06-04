@@ -1,0 +1,151 @@
+/* src/pages/HomePage.css */
+/* .page-container ya está definido globalmente en App.css */
+
+.hero-section {
+  background: linear-gradient(to right, #1D4ED8, #3B82F6); /* Gradiente primario */
+  color: white;
+  padding: 3rem 1.5rem; /* Ajustado padding */
+  text-align: center;
+  border-radius: 12px; /* Más redondeado */
+  margin-bottom: 3rem; 
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hero-section .hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem; /* Ajustado */
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white; 
+}
+@media (min-width: 768px) {
+ .hero-section .hero-title {
+     font-size: 3.25rem; /* Más grande en pantallas md+ */
+ }
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.125rem; /* Ajustado */
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #E0E7FF; 
+  opacity: 0.95;
+}
+ @media (min-width: 768px) {
+     .hero-section .hero-subtitle {
+         font-size: 1.25rem;
+     }
+ }
+
+.hero-section .hero-actions .button { 
+  margin: 0.5rem; /* Espacio para mobile */
+  padding: 0.875rem 1.75rem; 
+  font-size: 1rem; 
+}
+.hero-section .hero-actions .button-accent {
+  background-color: #F59E0B; /* Acento */
+  color: white;
+}
+.hero-section .hero-actions .button-accent:hover {
+  background-color: #D97706; /* Acento oscuro */
+}
+.hero-section .hero-actions .button-outline {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.hero-section .hero-actions .button-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Un hover sutil */
+  color: white;
+}
+
+
+.features-section .section-title {
+  text-align: center;
+  font-size: 2rem; 
+  font-weight: 700;
+  color: #1E293B; 
+  margin-bottom: 2.5rem;
+  margin-top: 3rem; /* Espacio antes de esta sección */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #FFFFFF; 
+  padding: 2rem;
+  border-radius: 10px; /* Ligeramente más redondeado */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  display: flex; /* Para alinear el botón al final */
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .feature-icon-emoji {
+  font-size: 3rem; 
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.feature-card .feature-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.375rem; 
+  font-weight: 600;
+  color: #1D4ED8; 
+  margin-bottom: 0.75rem;
+}
+
+.feature-card .feature-description {
+  color: #475569; 
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; 
+}
+
+.feature-card .feature-link.button-primary { 
+  margin-top: auto; 
+}
+
+
+.cta-section {
+  background-color: #E0E7FF; 
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+.cta-section .cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem; 
+  font-weight: 700;
+  color: #1E3A8A; 
+  margin-bottom: 1rem;
+}
+.cta-section .cta-subtitle {
+  font-size: 1.125rem;
+  color: #334155;
+  margin-bottom: 2rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-section .button-accent {
+  background-color: #F59E0B; 
+  color: white;
+  padding: 0.875rem 2.5rem;
+  font-size: 1.125rem;
+}
+.cta-section .button-accent:hover {
+  background-color: #D97706;
+}

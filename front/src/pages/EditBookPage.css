@@ -1,0 +1,15 @@
+/* src/pages/EditBookPage.css */
+/* La mayoría de los estilos vienen de .page-container y .form-container en App.css */
+
+.edit-book-page .page-title {
+    /* Estilos específicos si son necesarios */
+    text-align: center;
+}
+
+.edit-book-page .form-actions {
+    display: flex; /* Ya lo tiene la clase global, pero para confirmar */
+    justify-content: space-between; /* Para separar Cancelar de Guardar */
+}
+.edit-book-page .form-actions .button-secondary {
+    /* Estilos para el botón de cancelar si es necesario */
+}

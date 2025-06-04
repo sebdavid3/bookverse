@@ -1,0 +1,27 @@
+# Entornos Virtuales de Python (backend)
+back/venv/
+back/__pycache__/
+back/*.pyc
+back/.env
+back/instance/ # Si Flask crea una carpeta instance
+
+# Dependencias de Node.js (frontend)
+front/node_modules/
+front/build/ # Carpeta de build de producción de React
+front/.env
+front/.env.local
+front/.env.development
+front/.env.test
+front/.env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDEs (opcional, añade los de tu editor)
+.idea/
+.vscode/
+*.swp

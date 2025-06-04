@@ -1,0 +1,428 @@
+/* src/App.css */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #1E3A8A; /* Primario Oscuro (brand-primary-dark) */
+  color: white;
+  padding: 1rem 2rem; /* Usar rem para escalabilidad */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header .logo-link h1 {
+  color: white;
+  font-family: 'Montserrat', sans-serif; /* Fuente de encabezado */
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: 800;
+}
+.app-header .logo-link:hover h1 {
+  color: #d1d5db; /* Un gris claro para el hover */
+}
+
+
+.app-nav a,
+.app-nav span {
+  color: #e5e7eb; /* Gris claro para texto de nav */
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.app-nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.app-nav .nav-button { /* Para botones de login/logout/registro en nav */
+  background-color: #F59E0B; /* Acento (brand-accent) */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+.app-nav .nav-button:hover {
+  background-color: #D97706; /* Acento más oscuro */
+  color: white;
+}
+.app-nav .logout-button {
+  background-color: #475569; /* Texto Secundario (brand-text-secondary) o un gris */
+}
+.app-nav .logout-button:hover {
+  background-color: #334155;
+}
+
+
+.app-main {
+  flex-grow: 1; /* Para que el main ocupe el espacio disponible */
+  /* El padding y max-width se pueden poner en .page-container */
+}
+
+.app-footer {
+  background-color: #1E293B; /* Texto Principal (brand-text) o un gris muy oscuro */
+  color: #9CA3AF; /* Gris para texto de footer */
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+.app-footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* Clase de utilidad para contenedores de página */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto; /* Centrar */
+  padding: 2rem 1.5rem; /* Espaciado interno */
+}
+
+/* Clase para encabezados principales de página */
+.page-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem; /* ~36px */
+  font-weight: 700;
+  color: #1E3A8A; /* Primario Oscuro */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #CBD5E1; /* Borde (brand-border) */
+}
+
+/* Clases para botones (puedes expandir esto) */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+.button-primary {
+  background-color: #1D4ED8; /* Primario */
+  color: white;
+}
+.button-primary:hover {
+  background-color: #1E3A8A; /* Primario Oscuro */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.button-secondary {
+  background-color: #64748B; /* Gris/Slate */
+  color: white;
+}
+.button-secondary:hover {
+  background-color: #475569;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.button:disabled {
+  background-color: #9CA3AF;
+  color: #E5E7EB;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Estilos para formularios (base) */
+.form-container {
+  background-color: #FFFFFF; /* Fondo de Tarjeta (brand-bg-card) */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* O el que necesites */
+  margin: 2rem auto; /* Centrar formularios */
+}
+.form-container h2 { /* Título dentro del formulario */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1E3A8A;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+.form-group {
+  margin-bottom: 1.25rem;
+}
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #334155; /* Un gris más oscuro para labels */
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #CBD5E1; /* Borde */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3B82F6; /* Primario Claro */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.form-group.checkbox-group label { /* Para labels de checkbox */
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+}
+.form-group.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.form-actions { /* Para agrupar botones de formulario */
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem; /* Espacio entre botones */
+}
+.form-actions button[type="submit"] {
+    flex-grow: 1; /* Para que el botón principal ocupe más espacio si es el único */
+}
+
+/* Mensajes de error/éxito */
+.form-error-message, .error-message {
+  color: #b91c1c; /* Rojo oscuro */
+  background-color: #fee2e2; /* Rojo claro */
+  border: 1px solid #fca5a5; /* Borde rojo */
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.form-success-message, .success-message {
+  color: #065f46; /* Verde oscuro */
+  background-color: #d1fae5; /* Verde claro */
+  border: 1px solid #6ee7b7; /* Borde verde */
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.info-message {
+    font-style: italic;
+    color: #475569;
+    background-color: #f0f9ff; /* Azul muy claro */
+    padding: 0.75rem;
+    border-left: 4px solid #3B82F6; /* Primario Claro */
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Estilo para paneles/secciones dentro de páginas */
+.panel-section {
+  background-color: #FFFFFF; /* Fondo de Tarjeta */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin-bottom: 2rem;
+}
+.panel-section h3 { /* Encabezados dentro de paneles */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1D4ED8; /* Primario */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E5E7EB; /* Gris claro para borde */
+}
+
+/* En src/App.css */
+
+/* ... (tus estilos globales existentes) ... */
+
+.book-list-page-container .page-title {
+    margin-bottom: 1.5rem; /* Espacio después del título */
+}
+
+.book-list-page-container .page-header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem; /* Espacio si añades botones de acción aquí */
+}
+
+/* Estilo para el input de búsqueda de libros */
+.search-input-books {
+    /* Hereda estilos de .form-group input globalmente */
+    /* Puedes añadir estilos específicos si es necesario */
+    padding: 0.875rem 1rem; /* Un poco más de padding */
+    font-size: 1rem;
+    border: 1px solid #BCCCDC; /* Borde ligeramente más visible */
+}
+.search-input-books:focus {
+    border-color: #1D4ED8; /* brand-primary */
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
+}
+
+
+.book-list-grid {
+  display: grid;
+  /* Ajusta el número de columnas y el tamaño mínimo según tus preferencias */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+  gap: 1.75rem; /* Espacio entre tarjetas */
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (min-width: 640px) { /* sm */
+  .book-list-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media (min-width: 1024px) { /* lg */
+  .book-list-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+.book-card {
+  background-color: #fff; /* brand-bg-card */
+  border-radius: 10px; /* Bordes más redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06); /* Sombra sutil */
+  overflow: hidden;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  display: flex; /* Para que el link ocupe toda la tarjeta */
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.book-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* El link ocupa toda la tarjeta */
+}
+
+.book-card-image-wrapper {
+    width: 100%;
+    /* Aspect ratio para la imagen, ej. 2:3 (común para portadas) */
+    /* padding-bottom: 150%;  (height / width * 100) */
+    /* O una altura fija y object-fit */
+    height: 260px; /* Ajusta esta altura según tus imágenes */
+    position: relative; /* Para el placeholder */
+    background-color: #e9e9e9; /* Color de fondo mientras carga la imagen o si no hay */
+}
+
+.book-card-image {
+  width: 100%;
+  height: 100%; /* Cubre el wrapper */
+  object-fit: cover; /* Cubre sin distorsionar, puede cortar partes */
+  /* Si prefieres que se vea toda la imagen pero puede dejar espacios: object-fit: contain; */
+}
+
+.book-card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D1D5DB; /* brand-border o un gris */
+    color: #4B5563; /* brand-text-secondary */
+    font-size: 3rem; /* Tamaño de la inicial */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.book-card-image-placeholder span {
+    opacity: 0.6;
+}
+
+
+.book-card-content {
+  padding: 1rem;
+  flex-grow: 1; /* Asegura que este contenido se expanda si la tarjeta es flex */
+  display: flex;
+  flex-direction: column; /* Para alinear el autor abajo si es necesario */
+}
+
+.book-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem; /* Ligeramente más pequeño para tarjetas */
+  font-weight: 600;
+  color: #1E293B; /* brand-text */
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+  /* Truncar título a 2 líneas */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.6em; /* Espacio para 2 líneas (line-height * 2) */
+}
+
+.book-card-author {
+  font-size: 0.85rem;
+  color: #475569; /* brand-text-secondary */
+  margin-top: auto; /* Empuja el autor al final si la tarjeta es flex y el título es corto */
+}
+
+/* (Asegúrate de que .loading-message, .error-message, .info-message estén definidos en App.css) */
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: #475569;
+}
+
+/* En App.css o el CSS de la lista de libros */
+.book-card-actions {
+  padding: 0.75rem 1rem; /* Padding dentro de la tarjeta, después del contenido */
+  border-top: 1px solid #f0f0f0; /* Separador */
+  display: flex;
+  justify-content: space-around; /* O flex-end, space-between */
+  gap: 0.5rem;
+}
+
+.book-card-actions .button-edit,
+.book-card-actions .button-delete {
+  /* Heredan de .button pero podemos hacerlos más pequeños */
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+}
+
+.book-card-actions .button-edit {
+  background-color: #FFC107; /* Amarillo/Ámbar para editar */
+  color: #212529;
+  border: 1px solid #FFC107;
+}
+.book-card-actions .button-edit:hover {
+  background-color: #FFB300;
+}
+
+.book-card-actions .button-delete {
+  background-color: transparent; /* O un rojo suave */
+  color: #DC3545; /* Rojo */
+  border: 1px solid #F8D7DA;
+}
+.book-card-actions .button-delete:hover {
+  background-color: #F8D7DA; /* Rojo muy claro */
+  color: #b02a37;
+}

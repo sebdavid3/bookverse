@@ -1,0 +1,31 @@
+/* src/components/LoginForm.css */
+
+/* La clase .form-container se aplica al div raíz en LoginForm.js */
+/* Los estilos para h2, .form-group, label, input, button ya están definidos 
+   en App.css y se aplican a través de las clases usadas en el JSX. */
+
+.login-form-specific-styles .form-actions { /* Si necesitas un estilo específico para las acciones del login */
+    /* Por ejemplo, si quieres añadir un enlace de "Olvidé mi contraseña" */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+.login-form-specific-styles .forgot-password-link {
+    font-size: 0.85rem;
+    color: #1D4ED8; /* brand-primary */
+    text-align: right; /* O centrado, debajo del botón */
+    display: block; /* Para que ocupe su propia línea si es necesario */
+    margin-top: 0.75rem;
+}
+.login-form-specific-styles .forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje de bienvenida después del login (si lo dejas en el formulario) */
+.login-form-specific-styles .welcome-message {
+    text-align: center;
+    font-weight: 500;
+    color: #065f46; /* Verde oscuro */
+    margin-top: 1rem;
+}
