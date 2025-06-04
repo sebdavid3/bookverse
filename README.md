@@ -129,6 +129,7 @@ Muchos lectores disfrutan la lectura como una actividad social, pero enfrentan d
     El frontend debería abrirse en `http://localhost:3000`.
 
 ## Estructura del Proyecto
+```
 bookverse_proyecto_raiz/
 ├── .git/                 # Carpeta de Git (oculta)
 ├── .gitignore            # Especifica los archivos y carpetas a ignorar por Git
@@ -184,8 +185,7 @@ bookverse_proyecto_raiz/
     ├── package-lock.json # Versiones exactas de las dependencias.
     └── tailwind.config.js # Archivo de configuración de Tailwind CSS (si lo usaste).
                           # O postcss.config.js si es relevante.
-
-
+```
 ## Endpoints de la API (Resumen)
 *   `POST /api/register` - Registro de usuario
 *   `POST /api/login` - Inicio de sesión
