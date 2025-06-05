@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './HomePage.css'; // Importa los estilos específicos para esta página
+import bookverseLogo from './logo.jpg'; // <--- 1. IMPORTA TU LOGO
 
 function HomePage() {
   const { currentUser } = useAuth();
@@ -34,6 +35,9 @@ function HomePage() {
   return (
     <div className="page-container"> {/* Contenedor general de la página */}
       <section className="hero-section">
+        {/* --- 2. AGREGA LA IMAGEN DEL LOGO AQUÍ --- */}
+        <img src={bookverseLogo} alt="BookVerse Logo" className="home-page-logo" />
+
         <h1 className="hero-title">Bienvenido a BookVerse</h1>
         <p className="hero-subtitle">
           Tu universo personal para explorar libros, conectar con lectores y sumergirte en grandes historias.

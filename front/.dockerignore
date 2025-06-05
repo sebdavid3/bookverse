@@ -1,0 +1,5 @@
+# front/.dockerignore
+node_modules/
+build/
+.env
+npm-debug.log

@@ -149,3 +149,19 @@
 .cta-section .button-accent:hover {
   background-color: #D97706;
 }
+
+
+.home-page-logo {
+  display: block; /* Para poder usar margin: auto para centrar si es necesario */
+  max-width: 200px; /* Ajusta el tamaño máximo del logo */
+  height: auto;    /* Mantiene la proporción del logo */
+  margin: 0 auto 20px auto; /* Centra el logo horizontalmente y añade margen inferior */
+  /* Otros estilos que necesites: padding, border, etc. */
+}
+
+.hero-section {
+  text-align: center; /* Esto también ayudará a centrar el contenido del hero, incluido el logo si es display: block */
+  /* ... otros estilos del hero-section ... */
+}
+
+/* ... (más estilos existentes) ... */

@@ -1,0 +1,40 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    container_name: bookverse-backend
+    restart: unless-stopped
+    env_file:
+      - ./back/.env
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./back:/app
+    networks:
+      - bookverse-network
+    dns: # <--- AÑADE ESTAS LÍNEAS
+      - 8.8.8.8
+      - 8.8.4.4
+
+  frontend:
+    build:
+      context: ./front # Ruta al Dockerfile del frontend
+      dockerfile: Dockerfile
+    container_name: bookverse-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"     # Expone el puerto 80 de Nginx (frontend) al puerto 80 del host
+      # Si el puerto 80 está ocupado en tu host, puedes cambiarlo: "3000:80"
+      # y accederías a través de http://localhost:3000
+    depends_on:
+      - backend # Asegura que el backend se inicie antes (o al menos se intente)
+    networks:
+      - bookverse-network
+
+networks:
+  bookverse-network:
+    driver: bridge

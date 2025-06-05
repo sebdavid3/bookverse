@@ -1216,5 +1216,5 @@ if __name__ == '__main__':
     # Configura el logging para ver errores en la consola de Flask
     import logging
     logging.basicConfig(level=logging.INFO)
-    app.run(debug=True, port=5001) # Puerto diferente por si tienes otra app en 5000
+    app.run(host='0.0.0.0', debug=True, port=5001)
     

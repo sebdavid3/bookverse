@@ -1,0 +1,8 @@
+# back/.dockerignore
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.sqlite3 # Si tuvieras alguna db local de prueba

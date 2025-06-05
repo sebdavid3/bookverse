@@ -1,0 +1,7 @@
+Flask
+psycopg2-binary
+python-dotenv  # Para manejar variables de entorno (opcional pero recomendado)
+Werkzeug       # Para hashing de contraseñas (viene con Flask, pero explícito)
+Flask-Login    # Para manejo de sesiones de usuario
+Flask-Cors     # Para permitir peticiones desde un frontend en desarrollo
+requests       # Para hacer peticiones HTTP (opcional, si necesitas consumir APIs externas)

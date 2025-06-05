@@ -221,7 +221,16 @@ function App() {
         </main>
 
         <footer className="app-footer">
-          <p>© {new Date().getFullYear()} BookVerse. Todos los derechos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} {/* Mantienes el año dinámico */}
+            <a href="https://github.com/AlexDanii" target="_blank" rel="noopener noreferrer">
+              Daniel Cruzado
+            </a>
+            , {} {/* Esto es para el espacio y la coma, si quieres mantenerlo */}
+            <a href="https://github.com/sebdavid3" target="_blank" rel="noopener noreferrer">
+              Sebastian Ibañez
+            </a>
+          </p>
         </footer>
       </div>
     </Router>
